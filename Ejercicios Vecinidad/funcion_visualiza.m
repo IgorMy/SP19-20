@@ -1,4 +1,4 @@
-function imagenes(I,Ib,Color)
+function funcion_visualiza(I,Ib,Color)
 
 if( (size(I,1)== size(Ib,1))&&(size(I,2) == size(Ib,2)))
     
