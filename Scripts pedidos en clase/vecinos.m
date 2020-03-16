@@ -8,7 +8,7 @@ function [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila,
         if(fila < size(Imagenbinaria,1))
             [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila+1,columna,numero);
         end
-        if(columna > 0)    
+        if(columna > 1)    
             [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila,columna-1,numero);
         end
         if(columna < size(Imagenbinaria,2))    
