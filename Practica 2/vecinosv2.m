@@ -3,7 +3,6 @@ function [Imagenbinaria,Imagendouble] = vecinosv2(Imagenbinaria,Imagendouble,fil
         Imagenbinaria(fila,columna) = 0;
         Imagendouble(fila,columna) = numero;
         if(fila > 1)
-<<<<<<< HEAD
             [Imagenbinaria,Imagendouble] = vecinosv2(Imagenbinaria,Imagendouble,fila-1,columna,numero);
         end
         if(fila < size(Imagenbinaria,1))
@@ -21,40 +20,14 @@ function [Imagenbinaria,Imagendouble] = vecinosv2(Imagenbinaria,Imagendouble,fil
             end
             if(columna < size(Imagenbinaria,2))    
                 [Imagenbinaria,Imagendouble] =vecinosv2(Imagenbinaria,Imagendouble,fila-1,columna+1,numero);
-=======
-            [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila-1,columna,numero);
-        end
-        if(fila < size(Imagenbinaria,1))
-            [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila+1,columna,numero);
-        end
-        if(columna > 1)    
-            [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila,columna-1,numero);
-        end
-        if(columna < size(Imagenbinaria,2))    
-            [Imagenbinaria,Imagendouble] =vecinos(Imagenbinaria,Imagendouble,fila,columna+1,numero);
-        end
-        if(fila > 1)
-            if(columna > 1)    
-                [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila-1,columna-1,numero);
-            end
-            if(columna < size(Imagenbinaria,2))    
-                [Imagenbinaria,Imagendouble] =vecinos(Imagenbinaria,Imagendouble,fila-1,columna+1,numero);
->>>>>>> master
             end
         end
         if(fila < size(Imagenbinaria,1))
             if(columna > 1)    
-<<<<<<< HEAD
                 [Imagenbinaria,Imagendouble] = vecinosv2(Imagenbinaria,Imagendouble,fila+1,columna-1,numero);
             end
             if(columna < size(Imagenbinaria,2))    
                 [Imagenbinaria,Imagendouble] =vecinosv2(Imagenbinaria,Imagendouble,fila+1,columna+1,numero);
-=======
-                [Imagenbinaria,Imagendouble] = vecinos(Imagenbinaria,Imagendouble,fila+1,columna-1,numero);
-            end
-            if(columna < size(Imagenbinaria,2))    
-                [Imagenbinaria,Imagendouble] =vecinos(Imagenbinaria,Imagendouble,fila+1,columna+1,numero);
->>>>>>> master
             end
         end
     end
