@@ -17,21 +17,24 @@ imshow(imagenv4);
 
 Centroides = Calcula_Centroides(imagenv3);
 Areas = Calcular_Area(imagenv3);
-[~,Indice] = sort(Area);
+[~,Indice] = sort(Areas);
 
-imagenv5 = zeros(size(imagenv3));
+imagenv5 = cat(3,imagenv2,imagenv2,imagenv2);
 
 x = round(Centroides(Indice(1),1));
 y = round(Centroides(Indice(1),2));
-area = round(sqrt(Areas(Indice(1)))/2);
-imagenv5(x-area:x+area,y-area:y+area) = 1;
+imagenv5(x-1:x+1,y-1:y+1,2) = 0;
+imagenv5(x-1:x+1,y-1:y+1,3) = 0;
 
 x = round(Centroides(Indice(numero),1));
 y = round(Centroides(Indice(numero),2));
-area = round(sqrt(Areas(Indice(numero)))/2);
-imagenv5(x-area:x+area,y-area:y+area) = 1;
+imagenv5(x-1:x+1,y-1:y+1,2) = 0;
+imagenv5(x-1:x+1,y-1:y+1,3) = 0;
+
 
 imshow(imagenv5);
 
 % 5
 
+imagenv6 = Filtra_Objetos(imagenv2,5000);
+imshow(imagenv6);
