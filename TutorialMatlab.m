@@ -460,3 +460,12 @@ toc
 
 % encontrar algo en la imagen
 find(matriz_logica)
+
+% Función que devuelve una estructura con información del hardware de 
+%adquisición de imágenes% disponible, incluyendo los adaptadores de video 
+%instalados
+datos=imaqhwinfo;
+
+% Función que devuelve una estructura con información del dispositivo de 
+% video instalado 
+datos=imaqhwinfo('winvideo');
