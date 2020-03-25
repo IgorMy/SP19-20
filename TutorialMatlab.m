@@ -9,15 +9,15 @@ A = 2
 suma = a+A, resta = a-A; % Realiza la suma y la resta
 
 % OBSERVACIONES:
-% el carácter “,” para separar comandos
-% el símbolo “%” para introducir comentarios en el código
-% % si no ponemos “;” el resultado se muestra en pantalla
+% el carï¿½cter ï¿½,ï¿½ para separar comandos
+% el sï¿½mbolo ï¿½%ï¿½ para introducir comentarios en el cï¿½digo
+% % si no ponemos ï¿½;ï¿½ el resultado se muestra en pantalla
 
 
 %% Workspace
 whos A  % para ver el tipo de variable
 % double ; real de punto flotante con 8 bytes
-% empleado por Matlab por defecto en la definición de variables
+% empleado por Matlab por defecto en la definiciï¿½n de variables
 
 save variables A a suma resta  
 % Guarda las variables en fichero matlab variables.mat
@@ -32,21 +32,21 @@ clc % borra pantalla del command window.
 
 
 %% Ayuda matlab
-help save  % te ofrece ayuda respecto la función  por el command window
-doc load % abre la ayuda Matlab para dar la información
-type imfilter % edita el contenido de la función por command window
-edit imfilter % abre fichero .m con la función
+help save  % te ofrece ayuda respecto la funciï¿½n  por el command window
+doc load % abre la ayuda Matlab para dar la informaciï¿½n
+type imfilter % edita el contenido de la funciï¿½n por command window
+edit imfilter % abre fichero .m con la funciï¿½n
 
 
-%% DEFINICIÓN DE MATRICES
+%% DEFINICIï¿½N DE MATRICES
 a = 1
 whos a
 
 % []: Para concatenar informacion
-% Definición con corchetes 
+% Definiciï¿½n con corchetes 
 % Los corchetes se usan para concatenar informacion
-% Si la información va separada por espacios o comas, se añade horizontalmente
-% Si va seperada por "puntos y coma" se añade verticalmente
+% Si la informaciï¿½n va separada por espacios o comas, se aï¿½ade horizontalmente
+% Si va seperada por "puntos y coma" se aï¿½ade verticalmente
 
 b = [2 2], whos b
 b = [2; 2], whos b
@@ -71,18 +71,18 @@ cTras = c';
 g = [1 2 3; 4 5 6]
 whos g
 
-% Añade a g una última columana con valores 7 y 8
+% Aï¿½ade a g una ï¿½ltima columana con valores 7 y 8
 
 
 h = [g [7;8]]
 
-% Añade a h una última fila con los valores del vector c
+% Aï¿½ade a h una ï¿½ltima fila con los valores del vector c
 
 
 i = [h; c]
 whos i
 
-% Operador : para la definición de vectores filas con los valores indicados
+% Operador : para la definiciï¿½n de vectores filas con los valores indicados
 ValorInicio = 1; ValorFinal = 6; Paso = 1;
 A = ValorInicio:Paso:ValorFinal
 A = 1:6
@@ -98,15 +98,15 @@ D = zeros(3,1)
 
 E = eye(4) % matriz identidad 4x4
 
-F = rand(4,3) % matriz 4x3 de números distribución probabilidad uniforme entre 0-1
+F = rand(4,3) % matriz 4x3 de nï¿½meros distribuciï¿½n probabilidad uniforme entre 0-1
 
 G = randn(100,1)  % vector columna de 100 elementos
-% generados según distribución gaussiana de media cero y desviación típica
+% generados segï¿½n distribuciï¿½n gaussiana de media cero y desviaciï¿½n tï¿½pica
 % 1
 
 
 
-%% ACCESO A LOS ELEMENTOS DE UNA MATRIZ: con paréntesis
+%% ACCESO A LOS ELEMENTOS DE UNA MATRIZ: con parï¿½ntesis
 clear
 a = [1 4 6 9 -1 ; 2 4 9 11 5 ; 1 3 5 7 2 ; 3 -2 4 7 2]
 a11 = a(1,1)
@@ -142,15 +142,15 @@ B = A(2,:)
 % Eliminar de A la segunda fila
 A(2,:) = []
 
-% Añadir el contenido de B a A
+% Aï¿½adir el contenido de B a A
 A = [A ; B]
 
-% Añadir una nueva columna a A con valores 5.5, 10.5 y 15.5
+% Aï¿½adir una nueva columna a A con valores 5.5, 10.5 y 15.5
 B = [5.5; 10.5; 15.5];
 A = [A B]
 
 
-% Poner el contenido de las tres últimas columnas, deabajo de las tres primeras
+% Poner el contenido de las tres ï¿½ltimas columnas, deabajo de las tres primeras
 A1 = A(:,1:3)
 A2 = A(:,4:end)
 A = [A1; A2]
@@ -161,7 +161,7 @@ A = [A1; A2]
 
 % Accede a al primer y tercer elemento de la segunda fila    
 
-% Accede a los elementos 1, 2 y 4 de la última fila      
+% Accede a los elementos 1, 2 y 4 de la ï¿½ltima fila      
 
 % Accede a la matriz 3x3 centrada en el elemento de la fila 2, columna 3
 
@@ -227,7 +227,7 @@ A+B, A-B, A*B, A.*B, A/B, A*inv(B), A./B, A^2
 
 
 
-%% DEFINICION DE VARIABLES TIPO CARÁCTER Y CADENAS DE TEXTO
+%% DEFINICION DE VARIABLES TIPO CARï¿½CTER Y CADENAS DE TEXTO
 
 A = 'Hola'
 PrimerCaracter = A(1);
@@ -252,9 +252,9 @@ C{2,1} = B;
 
 % Acceso al contenido
 C(1)  % Variable tipo celda con el contenido de la primera celda
-C{1}  % Variable tipo carácter con el contenido de la primera celda
+C{1}  % Variable tipo carï¿½cter con el contenido de la primera celda
 
-%% DEFINICIÓN VARIABLES TIPO ESTRUCTURAS
+%% DEFINICIï¿½N VARIABLES TIPO ESTRUCTURAS
 Campos = [];
 Campos.opciones = [];
 Campos.valores = [];
@@ -263,7 +263,7 @@ Campos.opciones{2} = 'Normalizacion';
 Campos.valores{1} = true;
 Campos.valores{2} = [3 2];
 
-Campo.opciones(1)  % tipo cell - así se declaró opciones. Accede a la primer celda
+Campo.opciones(1)  % tipo cell - asï¿½ se declarï¿½ opciones. Accede a la primer celda
 Campo.opciones{1}  % tipo del contenido de la celda. Accede al contenido
 Campos.valores(1)
 Campos.valores{1}
@@ -282,33 +282,33 @@ close all
  x=0:pi/100:2*pi;
  y=sin(x);
  
- figure % crea una ventana gráfica y es la actual
- plot(x,y); % dibuja gráfico en ventana actual (y frente a x)
+ figure % crea una ventana grï¿½fica y es la actual
+ plot(x,y); % dibuja grï¿½fico en ventana actual (y frente a x)
  
  xlabel('Grados en radii') % texto para el eje x
  ylabel('Seno') % texto para el eje y
- title ('Ejemplo') % texto para el título
+ title ('Ejemplo') % texto para el tï¿½tulo
  XMIN = 0; XMAX = 7; YMIN = -1.2; YMAX = 1.2;
  axis([XMIN XMAX YMIN YMAX])
  
  
- % REPRESENTAR EN EL MISMO GRÁFICO DOS SENOS DESPLAZADOS DEL ANTERIOR
+ % REPRESENTAR EN EL MISMO GRï¿½FICO DOS SENOS DESPLAZADOS DEL ANTERIOR
  
- y1=sin(x-0.25); % otra función
- y2=sin(x-0.5); % otra función
- hold on % mantiene la ventana anterior para que se dibuje en ella el próximo gráfico sin borrar dicha ventana
+ y1=sin(x-0.25); % otra funciï¿½n
+ y2=sin(x-0.5); % otra funciï¿½n
+ hold on % mantiene la ventana anterior para que se dibuje en ella el prï¿½ximo grï¿½fico sin borrar dicha ventana
  plot(x,y1,'.r', x,y2,'g') % dos curvas
  legend('sen(x)','sen(x-0.25)','sen(x-0.5)') % leyendas
  grid on % para dibujar
  
  
- % EJEMPLO DE REPRESENTACIÓN EN 3D
+ % EJEMPLO DE REPRESENTACIï¿½N EN 3D
  x = -4*pi:0.1:4*pi;
  figure,
  plot3(sin(x),cos(x),x)
  
  
- %% FAMILIARIZARSE CON ALGUNAS FUNCIONES MATLAB GENÉRICAS
+ %% FAMILIARIZARSE CON ALGUNAS FUNCIONES MATLAB GENï¿½RICAS
  
 %  addpath  
 %  ceil, floor, round
@@ -316,11 +316,11 @@ close all
 %  length, size
 %  abs
 
-% Ejercicio: Crea una matriz 2x3 y calcula la suma, valor maximo, mnimio, media, desviacion típica y mediana con las
+% Ejercicio: Crea una matriz 2x3 y calcula la suma, valor maximo, mnimio, media, desviacion tï¿½pica y mediana con las
 % funciones matlab sum, max, min, mean, std, median
 
  
- % FAMILIARIZARE CON OPERADORES RELACIONALES, LÓGICOS Y SENTENCIAS DE
+ % FAMILIARIZARE CON OPERADORES RELACIONALES, Lï¿½GICOS Y SENTENCIAS DE
  % CONTROL DE FLUJO
 % eq - Equal = =
 % ne - Not equal ~ =
@@ -329,7 +329,7 @@ close all
 % le - Less than or equal < =
 % ge - Greater than or equal > =
  
- % FAMILIARIZARE CON OPERADORES LÓGICOS 
+ % FAMILIARIZARE CON OPERADORES Lï¿½GICOS 
 % and - Logical AND &
 % or - Logical OR |
 % not - Logical NOT ~
@@ -340,9 +340,9 @@ close all
 
  % FAMILIARIZARE CON SENTENCIAS DE CONTROL DE FLUJO
 % Sentencia if
-% if <condición>
+% if <condiciï¿½n>
 % <sentencia>
-% elseif <condición>
+% elseif <condiciï¿½n>
 % <sentencia>
 % else <sentencia>
 % end
@@ -350,24 +350,24 @@ close all
 
 % Sentencia switch
 % switch <expresion>
-% case 0 …
-% case 1 …
-% …
-% otherwise …
+% case 0 ï¿½
+% case 1 ï¿½
+% ï¿½
+% otherwise ï¿½
 % end
 
 
 
 % Sentencia for
 % for i = 1 : 2 :10
-% …
+% ï¿½
 % end
 
 
 
 % Sentencia while
-% while <condición>
-% …
+% while <condiciï¿½n>
+% ï¿½
 % end
 
 
@@ -383,14 +383,80 @@ close all
 
 % CREAR FUNCION SUMA DE TRES ELEMENTOS, TIPO UINT8, Y COMPROBAR SU
 % FUNCIONAMIENTO. GUARDA LA FUNCION EN UN DIRECTORIO LLAMADO FuncAux, y
-% añade el path de este directorio para llamarla
+% aï¿½ade el path de este directorio para llamarla
 
 addpath('FuncAux')
 A = funcion_suma(2,3,4)
 
 A = funcion_suma(200,300,400)
 
+%% Extras
 
+% Mostrar imagen en un contenedor figure
+figure,imshow(imagen);
 
+% Otra forma de mostrar la imagen
+imtool(imagen);
 
+% Con imtool(I), obtenemos Pixel info: (141,200) 147
+I(200,141)
 
+% leer una imagen
+imread("directorio de la imagen con el nombre de la imagen y su extension");
+
+% TamaÃ±o de una matriz / imagen
+[nfilas,ncolumnas,ncapas] = size(imagen)
+
+% Acceder a un dato especifico
+nfilas = size(imagen,1);
+
+% Cerrar todas las ventanas
+close all;
+
+% histograma
+imhist(imagen);
+
+% mantener el figure
+hold on;
+
+% Representacion histograma con stem
+stem (0:255, num_pix, '.r'), hold on, imhist(I)
+
+% datos de la imagen, devuelve una estructura
+imfinfo("ruta de la imagen");
+
+% numero aleatorio
+rand()*numero_maximo;
+
+% juntar matrices en capas
+cat(numero_capas,capa1,capa2,...);
+
+% guardar una imagen
+imwrite(imagen,"ruta de la imagen");
+
+% cambiar escala de grises
+imadjust(imagen,numero);
+
+% valores unicos
+unique(imagen);
+
+% separar los 1 conexos en numeros diferentes (funciÃ³n etiquetar)
+[imagen_etiquetada numero_de_objetos] = bwlabel(imagen_binaria);
+
+% devuelve una estructura con los centroides y las areas de los distintos
+% objetos de la imagen
+stats=regionprops(imagen_etiquetada,'Area','Centroid');
+
+% Muestra los objetos igual o mayor de la imagen
+bwareaopen(imagen_binaria, limite);
+
+% AÃ±adir direcotrio
+addpath("directorio");
+
+% timepo que tarda en ejecutarse una determinada instrucciÃ³n
+tic
+% instruccion
+toc
+
+% encontrar algo en la imagen
+find(matriz_logica)

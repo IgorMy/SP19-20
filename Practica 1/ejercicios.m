@@ -1,3 +1,9 @@
+%% Cargamos los directorios
+addpath("Funciones");
+addpath("Imagenes");
+
+%% Practica
+
 % Ejercicio 4
 
 pixel_width = imfinfo("P1_1.jpg").Width;

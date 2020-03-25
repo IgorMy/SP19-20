@@ -1,3 +1,7 @@
+% Cragamos las subcarpetas
+addpath("Funciones");
+addpath("Imagenes");
+
 %Practica echa en clase
 
 T1 = uint8(255*rand(20,40));
@@ -104,9 +108,3 @@ imshow(uint8(255*Ibin));
 % GUARDAR LA INFORMACION
 save ImagenSegmentada I Ibin
 imwrite(uint8(255*Ibin),'ImagenBinaria.tif');
-
-
-
-
-
-
