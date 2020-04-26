@@ -3,7 +3,7 @@ addpath("Funciones");
 addpath("Imagenes");
 
 %% Comprobar camara
-video = videoinput('winvideo',1,'YUY2_352X288');
+video = videoinput('linuxvideo',1,'YUY2_352X288');
 preview(video);
 video.TriggerRepeat = inf;
 video.FrameGrabInterval = 1;

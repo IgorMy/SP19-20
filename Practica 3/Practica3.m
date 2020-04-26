@@ -22,12 +22,24 @@ datos = imaqhwinfo("winvideo");
 datos.DeviceInfo.SupportedFormats % En linux son todos YUY2
 
 % Creo el objeto de video
-video = videoinput('winvideo',1,'YUY2_352X288');
+video = videoinput('winvideo',2,'RGB24_320X240');
 
 % Cambio el color a devolver para no tener que hacerlo luego color a
 % color
 video.ReturnedColorSpace = 'RGB';
 preview(video);
+
+clc, clear
+vid = videoinput('linuxvideo',1); 
+set(vid,'FramesPerTrigger',1);
+set(vid,'TriggerRepeat',Inf);
+set(vid,'ReturnedColorSpace','rgb')
+vidRes = get(vid, 'VideoResolution');
+nBands = get(vid, 'NumberOfBands');
+ax = preview(vid);
+frame = getsnapshot(vid);
+delete(vid);
+
 
 % Guardo una imagen en la matriz imagen
 I = getsnapshot(video);imtool(I);
@@ -123,7 +135,7 @@ stop(video);
 clear,clc;
 
 % Inicializo las variables de la camara
-video = videoinput('winvideo',1,'YUY2_352X288');
+video = videoinput('linuxvideo',1,'YUY2_352X288');
 video.ReturnedColorSpace = 'grayscale';
 
 % establezco el umbral
@@ -211,7 +223,7 @@ stop(video);
 clear,clc;
 
 % Inicializo las variables de la camara
-video = videoinput('winvideo',1,'YUY2_352X288');
+video = videoinput('linuxvideo',1,'YUY2_352X288');
 video.ReturnedColorSpace = 'grayscale';
 
 % Inicializo los datos de captura
