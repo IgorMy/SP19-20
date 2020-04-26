@@ -3,7 +3,8 @@ clear,clc;
 %% Rutas a directorios y carga de información
 addpath('../01_GeneracionMaterial/');
 addpath('../02_Extraer_Representar_Datos/VariablesGeneradas');
-addpath('../03_DiseñoClasificador/')
+addpath('../03_DiseñoClasificador/VariablesGeneradas');
+
 addpath('Funciones');
 addpath('VariablesGeneradas');
 
@@ -21,8 +22,6 @@ for i=1:numImag
     pause
 end
 close all;
-
-% La 13 es la ultima imagen de calibración con el objeto en el fondo (No es la ultima de array)
 
 % 2.- Visualizacion de esferas en el espacio de caracteristicas junto con
 % los datos de entrenamiento
