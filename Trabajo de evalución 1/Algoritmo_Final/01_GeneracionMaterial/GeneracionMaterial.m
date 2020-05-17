@@ -54,7 +54,7 @@ clear,clc;
 
 video = VideoReader("01_ColorAzul.avi");
 
-for i=1:video.NumFrames;
+for i=1:video.NumFrames
     I = read(video,i);
     imshow(I),title(i);
     pause;
