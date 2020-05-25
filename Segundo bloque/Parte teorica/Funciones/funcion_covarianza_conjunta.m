@@ -5,7 +5,7 @@ function mCov = funcion_covarianza_conjunta(X, Y)
     [numDatos, numAtributos] = size(X);
     
     M = zeros(numClases, numAtributos);
-    mCov = zeros(numAtributos, numAtributos, numClases);
+    mCov = zeros(numAtributos, numAtributos, numClases + 1);
     
     for i=1:numClases
 
@@ -21,6 +21,6 @@ function mCov = funcion_covarianza_conjunta(X, Y)
     
     numDatosClase1 = sum(Y==valoresClases(1));
     numDatosClase2 = sum(Y==valoresClases(1));
-    mCov = (numDatosClase1*mCov_clase1 + numDatosClase2*mCov_clase2 / (numDatosClase1 + numDatosClase2));
+    mCov(:,:,numClases + 1) = (numDatosClase1*mCov_clase1 + numDatosClase2*mCov_clase2 / (numDatosClase1 + numDatosClase2));
     
 end
