@@ -20,7 +20,7 @@ load nombresProblema.mat % strings para la representación (1X7 descriptores, 1x
 codifClases = unique(Y);
 numClases = length(codifClases);
 
-funcion_representa_datos(X,Y,[1 2],nombreProblemas); % Falta su creación
+funcion_representa_datos(X,Y,[1 2],nombresProblema);
 
 % CONCLUSION: Si Hu1 es > 1.1: letra X, caso contrario, letra Y
 
