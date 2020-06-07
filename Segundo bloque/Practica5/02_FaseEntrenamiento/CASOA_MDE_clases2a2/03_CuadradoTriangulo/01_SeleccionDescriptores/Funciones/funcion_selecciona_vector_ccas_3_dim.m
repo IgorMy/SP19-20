@@ -14,23 +14,22 @@ function [espacioCcas, JespacioCcas]=funcion_selecciona_vector_ccas_3_dim(X,Y,nu
         [~,indices] = sort (valoresJ,'descend');
 
     % 2. Preseleccion de caracteristicas
-        mejoresDInd = indices(1:numDescriptoresOI);
-   
+        mejoresDInd = indices(1:numDescriptoresOI);        
+        
     % 3. Seleccionamos la mejor combinatoria
     
-        comb = combnk(1:9,3);
+        comb = combnk(mejoresDInd,3);
         numComb = size(comb,1);
 
         outputs = Y';
         valoresJ = zeros(numComb,1);
         for i=1:numComb
-            columnasOI = mejoresDInd(1,comb(i,:));
-            inputs = X(:,columnasOI)';
+            inputs = X(:,comb(i,:))';
             valoresJ(i) = indiceJ(inputs,outputs);
         end
         [valoresJord,indices] = sort (valoresJ,'descend');
 
-        espacioCcas = mejoresDInd(comb(indices(1),:));
+        espacioCcas = comb(indices(1),:);
         JespacioCcas = valoresJord(1);
         
 end
