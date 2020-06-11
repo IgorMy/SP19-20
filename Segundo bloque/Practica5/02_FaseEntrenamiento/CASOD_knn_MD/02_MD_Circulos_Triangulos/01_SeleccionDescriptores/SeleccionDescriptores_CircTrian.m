@@ -1,8 +1,8 @@
-clear,clc,close all
+clear,clc,close all, restoredefaultpath;
 %% Carga de datos
 
 addpath('Funciones')
-addpath('../../../../01_GeneracionDatos/DatosGenerados')
+addpath('../../../../../01_GeneracionDatos/DatosGenerados')
 load('conjunto_datos_estandarizados.mat')
 load('nombresProblema.mat')
 
@@ -17,12 +17,10 @@ clear nombreFichero rutaFichero;
 
 %% Seleccionamos las clases que deseamos
 
-Y(Y == 3) = 1;
-
 X = Z;
 codifClases = unique(Y);
 
-clasesOI = [1 2];
+clasesOI = [1 3];
 codifClasesOI = codifClases(clasesOI);
 
 filasOI = false(size(Y));
@@ -47,4 +45,4 @@ nombresProblemaIO = [];
 nombresProblemaIO.descriptores = nombresProblema.descriptores;
 nombresProblemaIO.clases = nombresProblema.clases(clasesOI);
 nombresProblemaIO.simbolos = nombresProblema.simbolos;
-save('DatosGenerados/espacio_ccas_knn_CirculosTriangulos_Cuadrados','espacioCcas','nombresProblemaIO','XoI','YoI');
+save('DatosGenerados/espacio_ccas_circ_trian','espacioCcas','nombresProblemaIO','XoI','YoI');
