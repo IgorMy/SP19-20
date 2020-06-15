@@ -1,4 +1,4 @@
-clear, clc, close all;
+restoredefaultpath,clear, clc, close all;
 
 addpath('Funciones')
 

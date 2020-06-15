@@ -76,9 +76,10 @@ function Funcion_Reconoce_Formas(rutaFicheroImagen)
         
         %% Por cada objeto de la imagen, vamos a ir comprobando de que tipo es usando las funciones de clasificación
         for i=1:N
-            
+           figure;
+           subplot(1,4,1);
            funcion_visualiza(I,Ietiq == i,[255,255,0]);
-          
+           
           % Circulo-Cuadrado
             x1 = Z(i,espacioCcascc(1));
             x2 = Z(i,espacioCcascc(2));
@@ -104,7 +105,25 @@ function Funcion_Reconoce_Formas(rutaFicheroImagen)
                 title("Triangulo");
               end
           end
-            
+          
+          subplot(1,4,2);
+          funcion_representacion_clasificacion_binaria_con_frontera(XoIRedcc,YoIRedcc,coeficientes_d12cc,nombresProblemaIORedcc);
+          hold on
+          plot3(Z(i,espacioCcascc(1)),Z(i,espacioCcascc(2)),Z(i,espacioCcascc(3)),'om')
+          hold off
+          
+          subplot(1,4,3);
+          funcion_representacion_clasificacion_binaria_con_frontera(XoIRedct,YoIRedct,coeficientes_d12ct,nombresProblemaIORedct);
+          hold on
+          plot3(Z(i,espacioCcasct(1)),Z(i,espacioCcasct(2)),Z(i,espacioCcasct(3)),'om')
+          hold off
+          
+          subplot(1,4,4);
+          funcion_representacion_clasificacion_binaria_con_frontera(XoIRedcut,YoIRedcut,coeficientes_d12cut,nombresProblemaIORedcut);
+          hold on
+          plot3(Z(i,espacioCcascut(1)),Z(i,espacioCcascut(2)),Z(i,espacioCcascut(3)),'om')
+          hold off
+          
         end
         
     end

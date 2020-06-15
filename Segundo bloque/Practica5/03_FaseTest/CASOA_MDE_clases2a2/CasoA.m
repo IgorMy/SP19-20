@@ -1,4 +1,4 @@
-clear, clc, close all;
+restoredefaultpath,clear, clc, close all;
 
 %% Establecemos el nombre y la ruta de la imagen de test
 addpath('Funciones')
