@@ -1,4 +1,4 @@
-# Repositorio de almacenamiento de practicas
+# Repositorio de almacenamiento de Sistemas de Percepción
 :office: Universidad de Huelva (UHU)  
 :calendar: Curso 2019-2020  
 :mortar_board:Sistemas de precepción  
